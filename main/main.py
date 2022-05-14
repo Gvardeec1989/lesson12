@@ -12,7 +12,7 @@ main_blueprint = Blueprint('main', __name__, template_folder='templates')
 def main():
     return render_template('index.html')
 
-@main_blueprint.route('/search/')
+@main_blueprint.route('/search')
 def search():
     search_by = request.args['s']
     logging.info(f'Слово для поиска {search_by}')                                    #отображение в терминале
